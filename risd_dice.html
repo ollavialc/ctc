@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>introduction to computation</title>
+  <style>
+    <link rel="stylesheet" href="https://use.typekit.net/acw6vep.css" />
+      a:link {
+        color: black;
+      }
+      a:visited {
+        color: black;
+      }
+      a:hover {
+        color: blue;
+      }
+      body {
+        font-family: "Courier";
+        color: #1f1f1f;
+        background-color:#f7f7f7;
+      }
+      header {
+        display: flex;
+      }
+      div {
+        flex: 1 1 100px;
+      }
+      .itc {
+        text-align: left;
+      }
+      .date {
+        text-align: center;
+      }
+      .ws {
+        text-align: right;
+      }
+  </style>
+  <script src="../p5.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+</head>
+
+<body>
+  <header>
+      <div class="itc">introduction to computation</div>
+      <div class="date">1.10-2.9.2022</div>
+      <div class="ws">wintersession 2022</div>
+    </header>
+    <main>
+    <d1>
+    <br>
+    <dt>// risd_1_dice.ino</dt>
+<dt>// simulator of throwing dice</dt>
+<dt>// use real world noise as random seed</dt>
+<dt>// connect one end of a cable to A0, other end is loose</dt>
+<dt>// programmed on wednesday february 09 2022</dt>
+<dt>// by aaron montoya-moraga</dt>
+<br>
+<dt>// number of dices to be thrown</dt>
+<dd>int howManyDices = 2;</dd>
+
+<dt>// minimum number in the result</dt>
+<dd>int numberMin = 1;</dd>
+
+<dt>// maximum number in the result</dt>
+<dd>int numberMax = 6;</dd>
+
+<br>
+<dt>void setup() {</dt>
+
+  <dt>// open serial port</dt>
+  <dd>Serial.begin(9600);</dd>
+
+  <dt>// wait until serial port is open</dt>
+  <dd>while (!Serial) {</dd>
+    <dd>;</dd>
+  <dt>}</dt>
+<br>
+  <dt>// read noise from the cable on pin A0</dt>
+  <dd>int newSeed = analogRead(A0);</dd>
+
+  <dt>// set the random seed</dt>
+  <dd>randomSeed(newSeed);</dd>
+
+  <dt>// print the seed to the console</dt>
+  <dd>Serial.println(newSeed);</dd>
+
+  <dt>// go through every dice</dt>
+  <dd>for (int i = 0; i less than howManyDices; i++) {</dd>
+
+    <dt>// obtain a new random number to simulate the dice</dt>
+    <dd>long newNumber = random(numberMin, numberMax + 1);</dd>
+
+    <dt>// print the result to the console</dt>
+    <dd>Serial.println(newNumber);</dd>
+  <dd>}</dd>
+
+<dt>}</dt>
+<br>
+<dt>void loop() {</dt>
+
+<dt>}</dt>
+</d1>
+    </main>
+</body>
+
+</html>

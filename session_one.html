@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>session one</title>
+  <style>
+    <link rel="stylesheet" href="https://use.typekit.net/acw6vep.css" />
+      a:link {
+        color: black;
+      }
+      a:visited {
+        color: black;
+      }
+      a:hover {
+        color: blue;
+      }
+      body {
+        font-family: "Courier";
+        color: #1f1f1f;
+        background-color:#f7f7f7;
+      }
+      header {
+        display: flex;
+      }
+      div {
+        flex: 1 1 100px;
+      }
+      .itc {
+        text-align: left;
+      }
+      .date {
+        text-align: center;
+      }
+      .ws {
+        text-align: right;
+      }
+  </style>
+  <script src="../p5.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+  <script src="sketch.js"></script>
+</head>
+
+<body>
+  <header>
+      <div class="itc"><a href="/index.html">introduction to computation</a></div>
+      <div class="date">1.10-2.9.2022</div>
+      <div class="ws">wintersession 2022</div>
+    </header>
+    <main>
+        <p>session one: getting started</p>
+        <p>introduction to writing code</p>
+            <ol><li>draw a large square</li>
+                <li>draw a thin oval within the square </li>
+                <li>without lifting your pen, draw another oval slightly larger than the first and that shares its curve</li>
+                <li>keep drawing ovals that share these curves until the square is filled</li>
+                <li>the ovals can exceed the bounds of the square</li>
+        </ol>
+        <d1>recreating Josef Alber's squares
+        <br><br><dt>function setup() {</dt>
+  <dd>createCanvas(1999,1999);</dd>
+  
+<dt>}</dt>
+
+            <br><dt>function draw() {</dt>
+            <dd>background (300);</dd>
+  <dd>noStroke();</dd>
+  <dd>fill(0, 167, 124);</dd>
+  <dd>rect (100,50,500,500);</dd>
+  <dd>fill(0, 135, 126);</dd>
+  <dd>rect(150,125,400,400);</dd>
+  <dd>fill(0, 112, 124);</dd>
+  <dd>rect(200,200,300,300);</dd>
+  <dd>fill(0, 109, 168);</dd>
+  <dd>rect(250,275,200,200);</dd>
+  
+  <br><dd>fill(241, 174, 5);</dd>
+  <dd>rect (700,50,500,500);</dd>
+  <dd>fill(231, 143, 20);</dd>
+  <dd>rect(750,125,400,400);</dd>
+  <dd>fill(226, 93, 26);</dd>
+  <dd>rect(850,300,200,200);</dd>
+  
+  <br><dd>fill(210, 45, 25);</dd>
+  <dd>rect (100,650,500,500);</dd>
+  <dd>fill(221, 47, 23);</dd>
+  <dd>rect(150,725,400,400);</dd>
+  <dd>fill(229, 51, 23);</dd>
+  <dd>rect(200,800,300,300);</dd>
+  
+  <br><dd>fill(60, 94, 59);</dd>
+  <dd>rect (700,650,500,500);</dd>
+  <dd>fill(0, 133, 122);</dd>
+  <dd>rect(750,725,400,400);</dd>
+  <dd>fill(1, 145, 97);</dd>
+  <dd>rect(850,900,200,200);</dd>
+
+  <dd>fill(242, 163, 84);</dd>
+  <dd>rect (100,1250,500,500);</dd>
+  <dd>fill(226, 129, 26);</dd>
+  <dd>rect(150,1325,400,400);</dd>
+  <dd>fill(229, 108, 22);</dd>
+  <dd>rect(200,1400,300,300);</dd>
+  
+  <dd>fill(32, 30, 31);</dd>
+  <dd>rect (700,1250,500,500);</dd>
+  <dd>fill(58, 56, 57);</dd>
+  <dd>rect(750,1325,400,400);</dd>
+  <dd>fill(71, 67, 66);</dd>
+  <dd>rect(800,1400,300,300);</dd>
+  <dd>//point(x,y);</dd>
+  <dd>//line (x1,y1,x2,y2);</dd>
+  <dd>//rect (x,y,width,height);</dd>
+  <dd>//ellipse (x,y,width,height);</dd>
+<dt>}</dt>
+ </d1>
+    <script src="josef_albers.js"></script>
+</main>
+</body>
+</html>

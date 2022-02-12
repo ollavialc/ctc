@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>introduction to computation</title>
+  <style>
+    <link rel="stylesheet" href="https://use.typekit.net/acw6vep.css" />
+      a:link {
+        color: black;
+      }
+      a:visited {
+        color: black;
+      }
+      a:hover {
+        color: blue;
+      }
+      body {
+        font-family: "Courier";
+        color: #1f1f1f;
+        background-color:#f7f7f7;
+      }
+      header {
+        display: flex;
+      }
+      div {
+        flex: 1 1 100px;
+      }
+      .itc {
+        text-align: left;
+      }
+      .date {
+        text-align: center;
+      }
+      .ws {
+        text-align: right;
+      }
+  </style>
+  <script src="../p5.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+</head>
+
+<body>
+  <header>
+      <div class="itc">introduction to computation</div>
+      <div class="date">1.10-2.9.2022</div>
+      <div class="ws">wintersession 2022</div>
+    </header>
+<main>
+<br>
+<p>assignment two: drawing tool</p>
+<d1>
+    <dt>let h=0</dt>
+<dt>let s=0</dt>
+<dt>let l=0</dt>
+<dt>let t=1;</dt>
+<dt>var rainbow;</dt>
+
+<dt>function setup() {</dt>
+<dd>createCanvas(600, 600);</dd>
+  <dd>background(255);</dd>
+  <dd>rainbow = 0;</dd>
+<dt>}</dt>
+
+<dt>function draw() {</dt>
+ <dd> colorMode(HSL, 360);</dd>
+  <dd>stroke(0,0,0);</dd>
+  <dd>strokeWeight(1.5);</dd>
+  <dd>fill(rainbow, 180, 180);</dd>
+  <dd>sellipse(50, 290, 20, 20);</dd>
+<br>
+  <dd>fill(0, 0, 360);</dd>
+  <dd>ellipse(50, 230, 20, 20);</dd>
+  <br>
+  <dd>fill(0,0,0);</dd>
+  <dd>ellipse(50, 260, 20, 20);</dd>
+  <br>
+  <dd>fill(0, 360, 180);//red</dd>
+  <dd>ellipse(50, 50, 20, 20);</dd>
+  <br>
+  <dd>fill(30, 360, 180);//orange</dd>
+  <dd>ellipse(50, 80, 20, 20);</dd>
+  <br>
+  <dd>fill(60, 360, 180);//yellow</dd>
+  <dd>ellipse(50, 110, 20, 20);</dd>
+  <br>
+  <dd>fill(125, 360, 180);//green</dd>
+  <dd>ellipse(50, 140, 20, 20);</dd>
+  <br>
+  <dd>fill(250, 360, 180);//blue</dd>
+  <dd>ellipse(50, 170, 20, 20);</dd>
+  <br>
+  <dd>fill(270, 360, 180);//purple</dd>
+  <dd>ellipse(50, 200, 20, 20);</dd>
+  <br>
+
+  <dd>if (rainbow > 360) {</dd>
+    <dd>rainbow = 0;</dd>
+    <dd>} </dd>
+<dd>else {</dd>
+    <dd>rainbow++;</dd>
+  <dd>}</dd>
+  <br>
+  <dd>if(keyIsDown(SHIFT)){ </dd>
+  <dd>fill(h,s,l);</dd>
+  <dd>stroke(h,s,l);</dd>
+  <dd>brush(mouseX,mouseY);</dd>
+ <dd>}</dd><br>
+
+<dt>}</dt><br>
+<dt>function keyTyped(){</dt>
+   <br>
+  <dd>if (key === '1') {</dd>
+    <dd>noStroke();</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>t=1;</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+ <br>
+  <dd>if (key === '2') {</dd>
+    <dd>noStroke();</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>t=2;</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+   <br>
+  <dd>if (key === '3') {</dd>
+    <dd>noStroke();</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>t=4;</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+   <br>
+  <dd>if (key === '4') {</dd>
+    <dd>noStroke();</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>t=8;</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+   <br>
+  <dd>if (key === '5') {</dd>
+    <dd>noStroke();</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>t=16;</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+   <dd> stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+   <br>
+  <dd>if (key === 'c'){</dd>
+  <dd>background(0,0,365);</dd>
+  <dd>}</dd>
+<dt>}</dt>
+ <br>
+<dt>function mousePressed() {</dt>
+  
+  <dd>if (mouseX greater than 30 and mouseX less than 70 and mouseY greater than 30 and mouseY less than 70) {</dd>
+    <dd>noStroke();</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd><dd>h=0;</dd>
+    <dd>s=360;</dd>
+    <dd>l=180;// redv
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+    <br>
+    <dd>if (mouseX greater than 30 and mouseX less than 70 and mouseY greater than 55 and mouseY less than 100) {</dd>
+    <dd>noStroke()</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>stroke(30, 360, 180);</dd>
+    <dd>h=30;</dd>
+    <dd>s=360;</dd>
+    <dd>l=180;// orange</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd><dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+  <br>
+  <dd>if (mouseX greater than 30 and mouseX less than 70 and mouseY greater than 105 and mouseY less than 130) {</dd>
+   <dd> noStroke();</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>h=60;</dd>
+    <dd>s=360;</dd>
+    <dd>l=180;// yellow</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd><dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+  <br>
+  <dd>if (mouseX greater than 30 and mouseX less than 70 and mouseY greater than 130 and mouseY less than 160) {</dd>
+    <dd>noStroke();</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>h=125;</dd>
+    <dd>s=360;</dd>
+    <dd>l=180;// green</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+  
+  <dd>if (mouseX greater than 30 and mouseX less than 70 and mouseY greater than 155 and mouseY less than 190) {</dd>
+    <dd>noStroke();</dd>
+    <dd><dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>h=250;</dd>
+    <dd>s=360;</dd>
+    <dd>l=180;// blue</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+  <br>
+  <dd>if (mouseX > 30 and mouseX less than 70 and mouseY greater than 180 and mouseY less than 220) {</dd>
+    <dd>noStroke();</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>h= 270;</dd>
+    <dd>s= 360;</dd>
+    <dd>l= 180;// purple</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+  <br>
+  <dd>if (mouseX greater than 30 and mouseX less than 70 and mouseY greater than 220 and mouseY less than 240) {</dd>
+    <dd>noStroke();</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>h=0;</dd>
+    <dd>s= 0;</dd>
+    <dd>l=360;// white</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+    <dd>}</dd>
+  <br>
+  <dd>if (mouseX greater than 30 and mouseX less than 70 and mouseY greater than 280 and mouseY less than 300) {</dd>
+    <dd>noStroke();</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>h=rainbow;</dd>
+    <dd>s=180;</dd>
+   <dd> l=180;// rainbow</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+  <br>
+  <dd>if (mouseX greater than 30 and mouseX less than 70 and mouseY greater than 250 and mouseY less than 270) {</dd>
+    <dd>noStroke();</dd>
+    <dd>fill(0,0,360);</dd>
+    <dd>rect(30,320,70,20);</dd>
+    <dd>h=0;</dd>
+    <dd>s=0;</dd>
+    <dd>l=0;// black</dd>
+    <dd>strokeWeight(t);</dd>
+    <dd>strokeCap(ROUND);</dd>
+    <dd>stroke(h,s,l);</dd>
+    <dd>line(40, 330, 90, 330);</dd>
+  <dd>}</dd>
+<dt>}</dt>
+<br>  
+<dt>function mouseDragged() {</dt>
+  <dd>fill(h,s,l);</dd>
+  <dd>stroke(h,s,l);</dd>
+  <dd>strokeWeight(t);</dd>
+  <dd>line(mouseX, mouseY, pmouseX, pmouseY);</dd>
+<dt>}</dt>
+<br>
+<dt>function doubleClicked(){</dt>
+    <dd>star(mouseX, mouseY);</dd>
+<dt>}</dt>
+<br>
+<dt>function star(x,y){</dt>
+  <dd>noStroke();</dd>
+  <dd>fill(h,s,l);</dd>
+  <dd>beginShape();</dd>
+  <dd>vertex(x+30, y);</dd>
+  <dd>vertex(x+20, y+30);</dd>
+  <dd>vertex(x, y+45);</dd>
+  <dd>vertex(x+20, y+40);</dd>
+  <dd>vertex(x+20, y+70);</dd>
+  <dd>vertex(x+30, y+40);</dd>
+  <dd>vertex(x+70, y+70);</dd>
+  <dd>vertex(x+40, y+40);</dd>
+  <dd>vertex(x+60, y+20);</dd>
+  <dd>vertex(x+35, y+30);</dd>
+ <dd>vertex(x+30, y);</dd>
+  <dd>endShape(CLOSE);</dd>
+<dt>}</dt>
+<br>
+<dt>function brush(x,y){</dt>
+  <dd>ellipse(x-8,y,1);</dd>
+  <dd>ellipse(x-4,y,1);</dd>
+  <dd>ellipse(x,y,1);</dd>
+  <dd>ellipse(x+4, y,1);</dd>
+  <dd>sellipse(x+8, y,1);</dd>
+<dt>}</dt>
+    <br>
+    </d1>
+    </main>
+</body>
+ <script src="assignment_two.js"></script>
+</html>

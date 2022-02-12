@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>introduction to computation</title>
+  <style>
+    <link rel="stylesheet" href="https://use.typekit.net/acw6vep.css" />
+      a:link {
+        color: black;
+      }
+      a:visited {
+        color: black;
+      }
+      a:hover {
+        color: blue;
+      }
+      body {
+        font-family: "Courier";
+        color: #1f1f1f;
+        background-color:#f7f7f7;
+      }
+      header {
+        display: flex;
+      }
+      div {
+        flex: 1 1 100px;
+      }
+      .itc {
+        text-align: left;
+      }
+      .date {
+        text-align: center;
+      }
+      .ws {
+        text-align: right;
+      }
+  </style>
+  <script src="../p5.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+</head>
+
+<body>
+  <header>
+      <div class="itc">introduction to computation</div>
+      <div class="date">1.10-2.9.2022</div>
+      <div class="ws">wintersession 2022</div>
+    </header>
+    <main>
+    <d1>
+<br>
+<dt>// risd_2_hello.ino</dt>
+<dt>// simulator of digital clock</dt>
+<dt>// use real world noise as random seed</dt>
+<dt>// connect one end of a cable to A0, other end is loose</dt>
+<dt>// programmed on wednesday february 09 2022</dt>
+<dt>// by aaron montoya-moraga</dt>
+<br>
+<dt>// current time measured in milliseconds, seconds, minutes, hours</dt>
+<dd>int currentMs = 0;</dd>
+<dd>int currentSeconds = 0;</dd>
+<dd>int currentMinutes = 0;</dd>
+<dd>int currentHours = 0;</dd>
+<br>
+<dt>// increment</dt>
+<dd>int incrementMs = 1000;</dd>
+<br>
+<dt>void setup() {</dt>
+<br>
+<dt>// open serial port</dt>
+<dd>Serial.begin(9600);</dd>
+<br>
+<dt>// wait until serial port is open</dt>
+  <dd>while (!Serial) {</dd>
+    <dd>;</dd>
+  <dd>}</dd>
+<br>
+<dt>}</dt>
+<br>
+<dt>void loop() {</dt>
+<br>
+  <dt>// update time in milliseconds</dt>
+  <dd>currentMs = currentMs + incrementMs;</dd>
+<br>
+  <dt>// update seconds, minutes and hours</dt>
+  <dd>currentSeconds = currentMs / 1000;</dd>
+  <dd>currentMinutes = currentSeconds / 60;</dd>
+  <dd>currentHours = currentMinutes / 60;</dd>
+ <br> 
+  <dt>// print time to console in format HH:MM:SS</dt>
+  <dt>// with zero padding to the left</dt>
+<br>
+  <dd>checkPadding(currentHours);</dd>
+  <dd>Serial.print(currentHours);</dd>
+  <dd>Serial.print(":");</dd>
+<br>
+  <dd>checkPadding(currentMinutes);</dd>
+  <dd>Serial.print(currentMinutes);</dd>
+  <dd>Serial.print(":");</dd>
+<br>
+  <dd>checkPadding(currentSeconds);</dd>
+  <dd>Serial.print(currentSeconds);</dd>
+  <dd>Serial.println("");</dd>
+<br>
+  <dt>// wait until next iteration</dt>
+  <dd>delay(incrementMs);</dd>
+<br>
+<dt>}</dt>
+<br>
+<dt>// function to add padding of zeros to the left</dt>
+<dd>void checkPadding(int checkNumber) {</dd>
+<br>
+<dt>// if number is less than 10, print a 0</dt>
+  <dd>if (checkNumber less than 10) {</dd>
+    <dd>Serial.print("0");</dd>
+  <dd>}</dd>
+<dt>}</dt>
+</d1></main>
+</body>
+
+</html>
